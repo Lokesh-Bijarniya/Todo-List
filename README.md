@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a simple Todo List application built with React and styled using Tailwind CSS. The application allows users to add, update, delete, and mark tasks as completed. Additionally, users can search for specific tasks and see tasks in an expandable list format, displaying the task description and the timestamp of the last update.
 
-In the project directory, you can run:
+## System Design
 
-### `npm start`
+### Components
+1. **TaskList**: Manages the list of tasks, including adding, updating, deleting, and searching tasks.
+2. **Task**: Represents an individual task with functionality to edit, delete, and mark the task as completed.
+3. **TaskForm**: A form component for adding new tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Data Storage
+- A dummy JSON file (`tasks.json`) is used as a data repository to initialize the list of tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### State Management
+- React's `useState` and `useEffect` hooks are used for managing the state of tasks.
 
-### `npm test`
+## Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Features
+- **Create Task**: Users can add new tasks with a title and description.
+- **Update Task**: Users can edit the title and description of existing tasks.
+- **Mark as Done**: Users can mark tasks as completed or undo the completion.
+- **Search Tasks**: Users can search for tasks by their title.
+- **Expandable List**: Each task can be expanded to show the description and timestamp of the last update.
 
-### `npm run build`
+### Styling
+- Tailwind CSS is used for styling the application, providing a modern and responsive design.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Run the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (>= 12.x)
+- npm (>= 6.x)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Lokesh-Bijarniya/Todo-List.git
+   cd todo-list-app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies:**
+      ```bash
+      npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Set up Tailwind CSS:**
+   The Tailwind CSS configuration and initial setup are already included in the project. Ensure that you have the necessary files:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **tailwind.config.js**
+- **postcss.config.js**
+- **src/index.css** with Tailwind directives **(@tailwind base; @tailwind components; @tailwind utilities;)**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running the Application
+1. **Start the development server:**
+     ```bash
+      npm install
 
-## Learn More
+2. **Open your browser:**
+    Visit http://localhost:3000 to see the application running.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
+ src/
+|-- components/
+|   |-- TaskList.js
+|   |-- Task.js
+|   |-- TaskForm.js
+|-- data/
+|   |-- tasks.json
+|-- App.js
+|-- index.js
+|-- index.css
 
-### Code Splitting
+## Components Overview
+* **TaskList.js:** Manages the overall task list, including adding, updating, and filtering tasks.
+* **Task.js:** Represents an individual task, allowing users to edit, delete, and mark the task as completed.
+* **TaskForm.js:** A form for adding new tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Tailwind CSS Configuration
+Tailwind CSS is configured with the following files:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* **tailwind.config.js:** Tailwind configuration file for setting up purge options and theme customization.
+* **postcss.config.js:** PostCSS configuration file for processing Tailwind CSS.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+* Implement persistent data storage (e.g., using a backend API or localStorage).
+* Add user authentication for personal task management.
+* Improve accessibility and add more comprehensive error handling.
