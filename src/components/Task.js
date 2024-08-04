@@ -11,7 +11,7 @@ const Task = ({ task, onUpdate, onDelete }) => {
   };
 
   return (
-    <div className="border p-4 rounded mb-2 bg-white">
+    <div className="border p-4 rounded mb-2 bg-blue-100 text-blue-500">
       {isEditing ? (
         <div>
           <input
